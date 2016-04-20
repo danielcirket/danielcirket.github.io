@@ -54,7 +54,7 @@ For this I used management studio, and manually entered the row into the databas
 
 The values are:
 
-```txt
+```
 SettingsName: AUM_IgnoreUrlRegex
 SettingsValue: (?<!linkclick\.aspx.+)(?:(?<!\?.+)(\.pdf$|\.gif$|\.png($|\?)|\.css($|\?)|\.js($|\?)|\.jpg$|\.axd($|\?)|\.swf$|\.flv$|\.ico$|\.xml($|\?)|\.txt$|/\.well-known/acme-challenge/))
 SettingIsSecure: False
