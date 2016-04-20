@@ -91,7 +91,7 @@ Type: "text/json"
 
 You should now be able to put an extensionless file in the directory and successfully navigate to it in your browser.  
 
-### Step 4: _Run the *LetsEncrypt* tool and install the certificate_
+### Step 4: _Run the LetsEncrypt tool and install the certificate_
 
 Providing that you've managed to access the extensionless file in the previous step, you should now be setup and ready to run the LetsEncrypt tool to install your websites certificate.
 
