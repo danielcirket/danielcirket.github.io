@@ -5,7 +5,7 @@ title: Using Lets Encrypt with DNN Community Edition
 
 This is a quick guide to getting [Lets Encrypt](https://letsencrypt.org/) up and running with [DNN (DotNetNuke) Community Edition](http://www.dnnsoftware.com/community) using the *Advanced* URL rewrite option. Due to some unfortunate circumstances, we had to migrate our customer websites to a new web server at work, and in the process decided to give *LetsEncrypt* a go on our own website.
 
-Initial tests with a static site were successful and took only a few seconds to setup using the sample respository, [letsencrypt-win-simple](https://github.com/Lone-Coder/letsencrypt-win-simple).
+Initial tests with a static site were successful and took only a few seconds to setup using the sample repository, [letsencrypt-win-simple](https://github.com/Lone-Coder/letsencrypt-win-simple).
 
 However, getting the same results with DNN using it's advanced URL's were another story; the authorisation request was failing, citing a 404 HTTP status code. I spent a while looking into why this was failing; initially, I thought it might just be the extensionless MIME type, but adding this to the IIS site configuration didn't yield any succesful results.
 
