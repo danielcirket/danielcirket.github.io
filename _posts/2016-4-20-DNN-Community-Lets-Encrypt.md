@@ -55,10 +55,10 @@ For this I used management studio, and manually entered the row into the databas
 The values are:
 
 ```
-SettingsName: AUM_IgnoreUrlRegex
-SettingsValue: (?<!linkclick\.aspx.+)(?:(?<!\?.+)(\.pdf$|\.gif$|\.png($|\?)|\.css($|\?)|\.js($|\?)|\.jpg$|\.axd($|\?)|\.swf$|\.flv$|\.ico$|\.xml($|\?)|\.txt$|/\.well-known/acme-challenge/))
+SettingName: AUM_IgnoreUrlRegex
+SettingValue: (?<!linkclick\.aspx.+)(?:(?<!\?.+)(\.pdf$|\.gif$|\.png($|\?)|\.css($|\?)|\.js($|\?)|\.jpg$|\.axd($|\?)|\.swf$|\.flv$|\.ico$|\.xml($|\?)|\.txt$|/\.well-known/acme-challenge/))
 SettingIsSecure: False
-CreatedByUser: -1
+CreatedByUserID: -1
 CreatedOnDate: GETDATE()
 LastModifiedByUserID: -1
 LastModifiedOnDate: GETDATE()
@@ -71,10 +71,10 @@ If you would prefer a script rather than using the Management Studio UI _(Change
 ```sql
 INSERT INTO HostSettings
 (
-    SettingsName,
-    SettingsValue,
+    SettingName,
+    SettingValue,
     SettingIsSecure,
-    CreatedByUser,
+    CreatedByUserID,
     CreatedOnDate,
     LastModifiedByUserID,
     LastModifiedOnDate
