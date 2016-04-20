@@ -45,6 +45,7 @@ And this worked, success!
 
 Below are the steps required to get LetsEncrypt up and running with your DNN Community Install.
 <br>
+
 **Step 1:** Setting up an entry in the HostSettings table  
 
 For this I used management studio, and manually entered the row into the database using the UI:
