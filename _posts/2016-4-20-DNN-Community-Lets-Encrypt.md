@@ -25,7 +25,7 @@ Success!
 
 Below are the steps required to get *LetsEncrypt* up and running with your *DNN Community Install*.  
 
-### Step 1: *Setting up an entry in the HostSettings table*
+### Step 1: _Setting up an entry in the HostSettings table_
 
 For this I used SQL Server Management Studio, and manually entered the row into the database through the UI:
 
@@ -70,11 +70,11 @@ VALUES
 )
 ```
 
-### Step 2: *Restart your website*
+### Step 2: _Restart your website_
 
 To prevent *DNN* using cached settings, configured prior to the changes above, you will need to restart your website through IIS.  
 
-### Step 3: *Test that you can access an extensionless file in the *LetsEncrypt* challenge directory*
+### Step 3: _Test that you can access an extensionless file in the *LetsEncrypt* challenge directory_
 
 You will need to test if you can access an extensionless file in the directory that will be used for the challenge:
 
@@ -91,7 +91,7 @@ Type: "text/json"
 
 You should now be able to put an extensionless file in the directory and successfully navigate to it in your browser.  
 
-### Step 4: *Run the *LetsEncrypt* tool and install the certificate*
+### Step 4: _Run the *LetsEncrypt* tool and install the certificate_
 
 Providing that you've managed to access the extensionless file in the previous step, you should now be setup and ready to run the LetsEncrypt tool to install your websites certificate.
 
