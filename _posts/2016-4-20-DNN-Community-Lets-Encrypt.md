@@ -23,7 +23,7 @@ DNN Platform\Library\Entities\Urls\AdvancedUrlRewriter.cs
 
 and the check:
 
-![ignore request](../images/2016-04-20-DNN-Community-Lets-Encrypt/ignore-request.png)  
+![ignore request](https://raw.githubusercontent.com/danielcirket/danielcirket.github.io/master/images/2016-04-20-DNN-Community-Lets-Encrypt/Ignore-Request.PNG)  
 
 So noting that this used a regex match from some settings somewhere I tracked down where this was being set.
 
@@ -35,7 +35,7 @@ DNN Platform\Library\Entities\Urls\FriendlyUrlSettings.cs
 
 and located here:
 
-![ignore request](../images/2016-04-20-DNN-Community-Lets-Encrypt/ignore-regex.png)  
+![ignore regex](https://raw.githubusercontent.com/danielcirket/danielcirket.github.io/master/images/2016-04-20-DNN-Community-Lets-Encrypt/Ignore-Regex.PNG)  
 
 So what this method does, is try to load some settings, or if none are found use the default value which is specified in the screenshot above.
 
@@ -49,7 +49,7 @@ Below are the steps required to get LetsEncrypt up and running with your DNN Com
 
 For this I used management studio, and manually entered the row into the database using the UI:
 
-![host settings entry](../images/2016-04-20-DNN-Community-Lets-Encrypt/AUM_IgnoreUrlRegex.png)  
+![host settings entry](https://raw.githubusercontent.com/danielcirket/danielcirket.github.io/master/images/2016-04-20-DNN-Community-Lets-Encrypt/AUM_IgnoreUrlRegex.PNG)  
 
 The values are:
 
@@ -117,11 +117,11 @@ So providing that you managed to access the extensionless file in the previous s
 
 For this you will need to download and extract the [letsencrypt-win-simple](https://github.com/Lone-Coder/letsencrypt-win-simple) tool to a folder on the computer/web server.
 
-![LetsEncrypt Tool Folder](../images/2016-04-20-DNN-Community-Lets-Encrypt/lets-encrypt-tool-folder.png)  
+![LetsEncrypt Tool Folder](https://raw.githubusercontent.com/danielcirket/danielcirket.github.io/master/images/2016-04-20-DNN-Community-Lets-Encrypt/lets-encrypt-tool-folder.PNG)  
 
 Within the folder, you will now need to run the 'letsencrypt' executable.
 
-![LetsEncrypt Tool Step 1](../images/2016-04-20-DNN-Community-Lets-Encrypt/lets-encrypt-tool-running-step1.png) 
+![LetsEncrypt Tool Step 1](https://raw.githubusercontent.com/danielcirket/danielcirket.github.io/master/images/2016-04-20-DNN-Community-Lets-Encrypt/lets-encrypt-tool-running-step1.PNG) 
 
 Next, you will need to select either one of the bindings (numbered), or one of the other available options. For simplicity, I am going to assume that we are selecting a specific binding.
 
@@ -129,7 +129,7 @@ Once you have entered which host (In my example: 1), you can press enter to proc
 
 Providing that the request for a certificate was successful you should now see the following in IIS for your site binding:
 
-![IIS after certificate install](../images/2016-04-20-DNN-Community-Lets-Encrypt/iis-after-install.png) 
+![IIS after certificate install](https://raw.githubusercontent.com/danielcirket/danielcirket.github.io/master/images/2016-04-20-DNN-Community-Lets-Encrypt/iis-after-install.png) 
 
 Where the hostname and certificate are now set approriately to match your environment.
 
