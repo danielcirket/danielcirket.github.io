@@ -94,8 +94,8 @@ VALUES
 **Step 2: Restart your website**
 
 So, to prevent DNN using the older cached settings which were updated before, you will need to restart your website through IIS.  
-<br>
 
+<br>
 **Step 3: Test you can access an extensionless file in the LetsEncrypt challenge directory**
 
 You will need to now test if you can access an extensionless file in the directory that will be used for the challenge:
@@ -112,8 +112,8 @@ Type: "text/json"
 ``` 
 
 You should now be able to put an extensionless file in the directory and successfully navigate to it in your browser.  
-<br>
 
+<br>
 **Step 4: Run the LetsEncryptTool and install the certificate**
 
 So providing that you managed to access the extensionless file in the previous step, you should now be setup and ready to run the LetsEncrypt tool to install your websites certificate.
