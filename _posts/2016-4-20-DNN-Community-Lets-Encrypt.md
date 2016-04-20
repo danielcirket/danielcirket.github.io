@@ -3,7 +3,7 @@ layout: post
 title: Using Lets Encrypt with DNN Community Edition 
 ---
 
-So this is a quick guide to getting Lets Encrypt up and running with DNN Community Edition with using the "Advanced" URL rewrite option, after some unfortunate circumstances we had to migrate our customer websites to a new webserver at work, and in the process decided to give LetsEncrypt a go.
+So this is a quick guide to getting Lets Encrypt up and running with DNN Community Edition with using the "Advanced" URL rewrite option, after some unfortunate circumstances we had to migrate our customer websites to a new webserver at work, and in the process decided to give LetsEncrypt a go on our own website.
 
 Initial tests with a static site were successful and took only a few seconds to setup using [letsencrypt-win-simple](https://github.com/Lone-Coder/letsencrypt-win-simple).
 
