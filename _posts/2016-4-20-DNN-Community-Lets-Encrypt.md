@@ -74,7 +74,7 @@ VALUES
 
 To prevent *DNN* using cached settings, configured prior to the changes above, you will need to restart your website through IIS.  
 
-### Step 3: _Test that you can access an extensionless file in the *LetsEncrypt* challenge directory_
+### Step 3: _Test that you can access an extensionless file in the LetsEncrypt challenge directory_
 
 You will need to test if you can access an extensionless file in the directory that will be used for the challenge:
 
