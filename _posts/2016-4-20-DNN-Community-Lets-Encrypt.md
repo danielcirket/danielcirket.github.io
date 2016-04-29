@@ -48,26 +48,45 @@ The default value simply has the *LetsEncrypt* challenge directory appended so t
 If you would prefer a script over using the Management Studio UI _(Change the table name to match your actual table)_:
 
 ```sql
-INSERT INTO HostSettings
-(
-    SettingName,
-    SettingValue,
-    SettingIsSecure,
-    CreatedByUserID,
-    CreatedOnDate,
-    LastModifiedByUserID,
-    LastModifiedOnDate
-)
-VALUES
-(
-    'AUM_IgnoreUrlRegex',
-    '(?<!linkclick\.aspx.+)(?:(?<!\?.+)(\.pdf$|\.gif$|\.png($|\?)|\.css($|\?)|\.js($|\?)|\.jpg$|\.axd($|\?)|\.swf$|\.flv$|\.ico$|\.xml($|\?)|\.txt$|/\.well-known/acme-challenge/))',
-    0,
-    -1,
-    GETDATE(),
-    -1,
-    GETDATE()
-)
+DECLARE @SettingName nvarchar(50)
+DECLARE @SettingValue nvarchar(256)
+
+SET @SettingName = 'AUM_IgnoreUrlRegex'
+SET @SettingValue = '(?<!linkclick\.aspx.+)(?:(?<!\?.+)(\.pdf$|\.gif$|\.png($|\?)|\.css($|\?)|\.js($|\?)|\.jpg$|\.axd($|\?)|\.swf$|\.flv$|\.ico$|\.xml($|\?)|\.txt$|/\.well-known/acme-challenge/))'
+
+IF(EXISTS(SELECT SettingName FROM HostSettings WHERE SettingName = @SettingName))
+BEGIN
+    UPDATE 
+        HostSettings 
+    SET 
+        SettingValue = @SettingValue 
+    WHERE 
+        SettingName = @SettingName
+END
+ELSE
+BEGIN
+    INSERT INTO 
+        HostSettings
+        (
+            SettingName,
+            SettingValue,
+            SettingIsSecure,
+            CreatedByUserID,
+            CreatedOnDate,
+            LastModifiedByUserID,
+            LastModifiedOnDate
+        )
+        VALUES
+        (
+            @SettingName,
+            @SettingValue,
+            0,
+            -1,
+            GETDATE(),
+            -1,
+            GETDATE()
+        )
+END
 ```
 
 ### Step 2: _Restart your website_
