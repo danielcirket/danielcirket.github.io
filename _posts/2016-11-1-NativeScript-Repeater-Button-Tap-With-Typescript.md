@@ -9,6 +9,7 @@ _I am assuming that your page's bindingContext has already been bound to your vi
 
 First things first, add a button in your repeater item template:
 
+{% raw %}
 ```xml
 <Repeater items="{{ Products }}">
     <Repeater.itemsLayout>
@@ -22,6 +23,7 @@ First things first, add a button in your repeater item template:
     </Repeater.itemTemplate>
 </Repeater>
 ```
+{% endraw %}
 
 This markup will display a list of products showing the product name and then a button to 'Add' to the basket for this example.
 
