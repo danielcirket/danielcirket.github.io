@@ -5,9 +5,9 @@ title: Nativescript - Android, Bluetooth Barcode Scanners and Typescript
 
 In this article I'm going to be using a bluetooth scanner and combined with a background worker to handle reading barcode information into a nativescript application on Android.
 
-**_Note: for this article I'm using a Opticon OPN-2002 bluetooth barcode scanner [see here](http://www.opticonusa.com/products/opticon-legacy-products/OPN-2002.html)._**
+> Note: for this article I'm using a Opticon OPN-2002 bluetooth barcode scanner [see here](http://www.opticonusa.com/products/opticon-legacy-products/OPN-2002.html).
 
-_Disclaimer: I will assume that this process should be the same for various bluetooth barcode scanners, however I cannot make any guarantee on this_
+> Disclaimer: I will assume that this process should be the same for various bluetooth barcode scanners, however I cannot make any guarantee on this
 
 A quick summary of what we will achieve in this article:
 
@@ -227,7 +227,7 @@ import { BluetoothService, BondedDevice } from './services/bluetooth/bluetooth';
 
 app.on(app.launchEvent, (args : app.LaunchEventData) => {
 
-    const bluetoothService=  new BluetoothService();
+    const bluetoothService = new BluetoothService();
 
     bluetoothService.Enabled
         .then((enabled : boolean) => {
@@ -255,7 +255,7 @@ app.on(app.launchEvent, (args : app.LaunchEventData) => {
             }
 
             bluetoothService.Notify(selectedDevice : BondedDevice, (result : string) => {
-                console.log('Result from bluetooth scanner: ', JSON.stringify*(result));
+                console.log('Result from bluetooth scanner: ', JSON.stringify(result));
 
                 // TODO: Handle the scanned input as required
             });
