@@ -12,19 +12,19 @@ or what problems will it solve that aren't done already in other languages? The 
 At the time of starting this project I will be starting from near-zero knowledge, that is you 
 could sum up what I know so far as the following:
 
-1. Have some syntax (keeping it simple to start is usually good advice!)
+1. Have some syntax
 2. Tokenize the source text into tokens
 3. Create an AST from the tokens
 4. Declaration and type checking etc
-5. Code optimisation / generation
-6. Output any errors during the various phases
+5. Optimisations
+6. Code generation
+7. Output any errors during the various phases (Easy to print errors, harder to make them useful in as many cases as possible)
 
-As far as implementation goes, I'll be figuring out 99% of this as I go, very different to the 
-usual web applications I do for my day job to say the least! 
+The first three steps should be *relatively* straight forward, and I already have an idea of how this should be done from a high-level, 
+however as far as implementation goes, I'll be figuring out 99% of this as I go, it's a very different subject to the 
+usual LOB and web applications I do day-to-day! But step 4, 5, and 6, implementing them, at this stage: 
 
-It's probably worth pointing out at this point that I'm a self-taught developer (aren't we 
-all really?), and by that I've had no formal education in CS or relevant field, I've learnt 
-everything as I go - but this is also a hobby and passion, not just a job!
+¯\\\_(ツ)\_/¯
 
 Initially I'm going to be implementing this language in C#, mostly because it's the main language 
 I use daily - you may notice some syntax familiarity if you use C# yourself.
@@ -32,7 +32,7 @@ I use daily - you may notice some syntax familiarity if you use C# yourself.
 ## High-level goals
 
 The high level goals of the language will be to use a C#-like syntax which will allow compilation 
-to web assembly (WASM) and/or native (via LLVM).
+to web assembly (WASM) and/or 'native' (via LLVM).
 
 This may sound like some lofty goals straight off the bat - and you'd be right, but at this point, 
 why not? As the project progresses I'm positive that the goals will change, so right now why 
@@ -71,7 +71,7 @@ module ExampleModule
 
     public string ModuleLevelMethod(string input)
     {
-        return string + input;
+        return "Hello " + input;
     }
 }
 ``` 
@@ -80,3 +80,6 @@ Those familar with C#, Typescript or Java-like languages should find the syntax 
 minor differences, the main one being module level method declarations - I envision this 
 replacing the need for static methods / classes at this stage.
 
+## Summary
+
+This gives us a fair bit of work to do, even just to getting a working front-end that produces a checked AST. With that in mind the next post in this series will be implementing a tokenizer so stay tuned for part 2!
