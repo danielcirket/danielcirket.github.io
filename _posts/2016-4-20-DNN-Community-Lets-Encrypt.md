@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Using Lets Encrypt with DNN Community Edition 
+category: Development
+tags: [LetsEncrypt, DNN]
 ---
 
 This is a quick guide to getting [Lets Encrypt](https://letsencrypt.org/) up and running with [DNN (DotNetNuke) Community Edition](http://www.dnnsoftware.com/community) using the *Advanced* URL rewrite option. Due to some unfortunate circumstances, we had to migrate our customer websites to a new web server at work, and in the process decided to give *LetsEncrypt* a go on our own website.

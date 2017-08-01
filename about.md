@@ -4,8 +4,4 @@ title: About
 permalink: /about/
 ---
 
-.NET Software and Web Developer
-
-### Contact me
-
-[@dancirket](http://www.twitter.com/dancirket)
+A UK based software and web developer currently working at <a href="https://www.atlascode.com" target="_blank" rel="noreferrer">Atlascode</a>. I usually write code in C# and Typescript/Javascript but have and currently use a multitude of other languages.

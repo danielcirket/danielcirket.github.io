@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Nativescript - Android, Bluetooth Barcode Scanners and Typescript 
+category: Nativescript
+tags: [Nativescript, Bluetooth]
 ---
 
 In this article I'm going to be using a bluetooth scanner and combined with a background worker to handle reading barcode information into a nativescript application on Android.

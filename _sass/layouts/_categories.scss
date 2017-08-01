@@ -1,0 +1,46 @@
+
+// Category Listings
+.categories {
+  .category {
+    @extend %padding-regular;
+    padding: 1% 20%;
+    @media screen and (max-width: 576px) {
+      padding: $padding-small;
+    }
+    width: 100%;
+    margin-bottom: 0;
+    display: inline-block;
+    background-size: $feature-image-size;
+    border-bottom: 1px solid $border-color;
+    p a:hover {
+      @extend %link-hover;
+    }
+
+    ul {
+
+        li {
+            .row {
+                .col-xs-1 {
+                    width: 8.333%;
+                    float: left;
+                }
+                .col-xs-11 {
+                    width: 91.667%;
+                    float: left;
+                }
+
+                &:after {
+                    content: " ";
+                    display: table;
+                    clear: both;
+                }
+            }
+
+            list-style-type: none;
+        }
+    }
+  }
+  .excerpt {
+    margin-top: 1em;
+  }
+}

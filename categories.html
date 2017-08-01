@@ -1,0 +1,47 @@
+---
+layout: default
+title: Categories
+---
+
+{% assign rawcats = "" %}
+{% for post in site.posts %}
+{% assign tcats = post.category | join:'|' | append:'|' %}
+{% assign rawcats = rawcats | append:tcats %}
+{% endfor %}
+
+{% assign rawcats = rawcats | split:'|' | sort %}
+
+{% assign cats = "" %}
+
+{% for cat in rawcats %}
+{% if cat != "" %}
+
+{% if cats == "" %}
+{% assign cats = cat | split:'|' %}
+{% endif %}
+
+{% unless cats contains cat %}
+{% assign cats = cats | join:'|' | append:'|' | append:cat | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+<div class="categories">
+{% for ct in cats %}
+<div class="category">
+<h2 id="{{ ct | slugify }}">{{ ct }}</h2>
+<ul>
+{% for post in site.posts %}
+{% if post.category contains ct %}
+  <li>
+      <div class="row">
+          <div class="col-xs-1"><small>{{ post.date | date_to_string }}</small></div>
+          <div class="col-xs-11"><a href="{{ post.url }}">{{ post.title }}</a></div>
+      </div>
+  </li>
+{% endif %}
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
+</div>

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Programming Language - Part 1 - Introduction
+category: Programming Language
+tags: [Compiler, Language Design]
 ---
 
 In this series we are going to attempt to create our own programming language - sounds 

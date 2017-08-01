@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Nativescript Button tap event in a Repeater Item
+category: Nativescript
+tags: [Nativescript]
 ---
 
 This is a quick walkthrough to getting a buttons tap event working from within a repeater using Typescript and Nativescript.

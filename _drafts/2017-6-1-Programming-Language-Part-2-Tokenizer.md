@@ -194,6 +194,7 @@ public class Tokenizer
     private int _column;
     private int _index;
     private int _line;
+    private string[] _keywords;
     private ErrorSink _errorSink;
     private ISourceFile _sourceFile;
     private ISourceFileLocation _sourceFileLocation;
